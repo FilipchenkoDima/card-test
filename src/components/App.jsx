@@ -2,6 +2,7 @@ import { getUsers } from 'services/user-api';
 import { Card } from './Card/Card';
 import { useEffect, useState } from 'react';
 import { Button } from './Button/Button';
+import './App.css'
 
 export const App = () => {
   const [users, setUsers] = useState([]);
@@ -21,8 +22,7 @@ export const App = () => {
   };
 
   return (
-    <div style={{textAlign: 'center',
-    paddingBottom: '16px'}}>
+    <div className='wrapper'>
       {users.map(({ tweets, followers, avatar, id }) => {
         return (
           <Card
