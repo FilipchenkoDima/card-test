@@ -2,7 +2,7 @@ import { getUsers } from 'services/user-api';
 import { Card } from './Card/Card';
 import { useEffect, useState } from 'react';
 import { Button } from './Button/Button';
-import './App.css'
+import './App.css';
 
 export const App = () => {
   const [users, setUsers] = useState([]);
@@ -22,17 +22,19 @@ export const App = () => {
   };
 
   return (
-    <div className='wrapper'>
-      {users.map(({ tweets, followers, avatar, id }) => {
-        return (
-          <Card
-            tweets={tweets}
-            followers={followers}
-            avatar={avatar}
-            key={id}
-          />
-        );
-      })}
+    <div className="wrapper">
+      <ul className="card__list">
+        {users.map(({ tweets, followers, avatar, id }) => {
+          return (
+            <Card
+              tweets={tweets}
+              followers={followers}
+              avatar={avatar}
+              key={id}
+            />
+          );
+        })}
+      </ul>
 
       {!isLoading && <Button onClick={loadMoreBtn} />}
     </div>

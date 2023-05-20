@@ -31,7 +31,7 @@ export const Card = ({  tweets, followers, avatar }) => {
     }
   };
   return (
-    <section className="hero">
+    <li className="hero">
       <img
         src={svgLogo}
         alt="User"
@@ -65,6 +65,6 @@ export const Card = ({  tweets, followers, avatar }) => {
           </button>
         </div>
       </div>
-    </section>
+    </li>
   );
 };

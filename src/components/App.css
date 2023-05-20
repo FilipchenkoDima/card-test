@@ -1,7 +1,16 @@
 .wrapper {
+  padding: 32px 14px;
+  display: flex;
+  place-content: center;
+  flex-direction: column;
+}
+
+.card__list {
+  margin: 0;
+  padding: 0;
+
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
   place-content: center;
-  padding: 32px 14px;
 }
